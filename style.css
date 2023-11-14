@@ -1,0 +1,22 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.grid-container {
+  width: 500px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px auto;
+}
+
+h1 {
+  text-align: center;
+}
+
+.grid-container div {
+  width: calc(500px / 16);
+  height: calc(500px / 16);
+  border: 1px solid red;
+}
