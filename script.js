@@ -1,5 +1,13 @@
 const gridContainer = document.querySelector(".grid-container");
 const button = document.querySelector(".btn");
+let numOfSquares = 256;
+
+function getRandomRGB() {
+  let r = Math.floor(Math.random() * 255);
+  let g = Math.floor(Math.random() * 255);
+  let b = Math.floor(Math.random() * 255);
+  return `rgb(${r}, ${g}, ${b})`;
+}
 
 // Function to remove all child elements of a given element
 function removeAllChildNodes(parent) {
@@ -8,7 +16,7 @@ function removeAllChildNodes(parent) {
   }
 }
 
-for (let i = 0; i < 256; i++) {
+for (let i = 0; i < numOfSquares; i++) {
   let div = document.createElement("div");
   gridContainer.append(div);
 }
@@ -16,12 +24,12 @@ for (let i = 0; i < 256; i++) {
 // Event listener for hover effect using event delegation
 gridContainer.addEventListener("mouseover", (event) => {
   if (event.target.tagName === "DIV") {
-    event.target.style.backgroundColor = "rgb(255, 155, 155)";
+    event.target.style.backgroundColor = getRandomRGB();
   }
 });
 
 button.addEventListener("click", () => {
-  let numOfSquares = prompt(
+  numOfSquares = prompt(
     "Enter the number of squares per side for the new grid"
   );
   if (numOfSquares < 100) {

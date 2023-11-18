@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+body{
+  background-color: rgb(31, 27, 78);
+}
+ 
 .grid-container {
   width: 500px;
   display: flex;
@@ -14,15 +18,25 @@
 .btn-container{
   display: flex;
   justify-content: center;
-  
+}
+
+.btn{
+  outline: none;
+  border: none;
+  padding: 4px 6px;
+  border-radius: 4px;
+  background-color: gray;
+  color: white;
+  font-size: 15px;
 }
 
 h1 {
   text-align: center;
+  color: white;
 }
 
 .grid-container div {
   width: calc(500px / 16);
   height: calc(500px / 16);
-  border: 1px solid red;
+  border: 1px solid black;
 }
